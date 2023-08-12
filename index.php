@@ -39,6 +39,7 @@ $Route->group2('ajax', function () {
 });
 
 
+
 $Route->group('admin', function ($Route) {
 
     if(@$_SESSION['acesso'] == 'Administrador' || @$_SESSION['acesso'] == 'Vendedor' || @$_SESSION['acesso'] == 'Financeiro') {
@@ -57,6 +58,9 @@ $Route->group('admin', function ($Route) {
 
         $Route->group('configuracoes', function ($Route) {
             $Route->crud('configuracao');
+        });
+        $Route->group('compromissos', function ($Route) {
+            $Route->crud('compromisso');
         });
 
     } else {

@@ -101,6 +101,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `acesso`, `nome`, `data_nascimento`, `cpf`, `rg`, `telefone`, `endereco`, `numero`, `complemento`, `bairro`, `cep`, `cidade`, `estado`, `banco`, `agencia`, `conta`, `op_vr`, `tipo_conta`, `email`, `senha`, `imagem`, `session`, `data_cadastro`, `data_alteracao`, `id_update_user`, `status`) VALUES
 (21, 'Administrador', 'Administrador', '02/08/1992', '111.111.111-11', '11111', '(62) 9999-99999', 'Rua', '0', 'Ap 100', 'Residencial', '74000-000', 'Goiânia', 'GO', NULL, NULL, NULL, NULL, NULL, 'admin@admin.com', '$2y$12$ppFcsC0oV8Vja8iizu75be9/kYaKdKOblpjhk075mggFiI5qwNnK6', 'assets/img/avatar.jpg', NULL, '2020-06-10 01:04:39', '2020-08-11 22:35:26', 21, 1);
 COMMIT;
+-- -------------------------------------------------------------------------
+DROP TABLE IF EXISTS `compromissos`;
+CREATE TABLE IF NOT EXISTS `compromissos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `completo` boolean DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
